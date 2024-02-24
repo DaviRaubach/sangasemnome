@@ -1,0 +1,84 @@
+
+c
+
+
+#+begin_src lilypond :file teste.pdf :results none
+    % \include "stylesheet.ily"
+  % #(ly:set-option 'backend 'svg)
+    #(set-global-staff-size 20)
+  
+    \score {
+                          af8
+                        % AFTER:
+                        % SPANNER_STOPS:
+                        \!
+                        \stopTextSpan
+                        b8
+                        % AFTER:
+                        % ARTICULATIONS:
+                        \ppp
+                        % SPANNER_STARTS:
+                        ~
+                        % ABSOLUTE_BEFORE:
+                        % COMMANDS:
+
+                                \override TextSpanner.bound-details.right.arrow = ##t
+                                \override TextSpanner.dash-fraction = #0.5
+                                \override TextSpanner.dash-period = #1.5
+                                \override TextSpanner.bound-details.right.stencil-align-dir-y = #CENTER
+                                \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+                                \override TextSpanner.arrow-width = #0.3
+                                 \override TextSpanner.staff-padding = 2
+                        \after 1 * 0/16
+                        - \tweak bound-details.right.padding #1
+                        - \tweak bound-details.right.text \markup \upright ord.
+                        \startTextSpan
+                        \after 1 * 11/16
+                        \stopTextSpan
+                        {
+                        \after 1 * 0/16 \<
+                        \after 1 * 11/16 \ff
+                        {
+                        \override Hairpin.stencil = #flared-hairpin
+                        % OPEN_BRACKETS:
+                        \repeat tremolo 8 {
+                            b32.
+                            % AFTER:
+                            % SPANNER_STARTS:
+                            ~
+                            % OPENING:
+                            % COMMANDS:
+                            \mark \markup { \musicglyph "scripts.ufermata"} 
+                            <
+                                b
+                                \tweak style #'harmonic
+                                e'
+                            >32.
+                            % AFTER:
+                            % COMMANDS:
+
+                                    \revert TextSpanner.bound-details.right.arrow
+                                    \revert TextSpanner.dash-fraction
+                                    \revert TextSpanner.dash-period
+                                    \revert TextSpanner.bound-details.right.stencil-align-dir-y
+                                    \revert TextSpanner.bound-details.left.stencil-align-dir-y
+                                    \revert TextSpanner.arrow-width
+                                     \revert TextSpanner.staff-padding
+                            \revert Hairpin.stencil
+                        % CLOSE_BRACKETS:
+                        }
+                        % AFTER:
+                        % COMMANDS:
+                        }
+                        }
+                        % CLOSING:
+                        % GROB_REVERTS:
+                        \revert Score.RehearsalMark.baseline-skip
+                        \revert Score.RehearsalMark.extra-offset
+    }
+
+#+end_src
+
+#+attr_latex: :width 21cm
+[[file:exemplo_tempo_fala.pdf]]
+

@@ -1,0 +1,127 @@
+#+INFOJS_OPT: view:overview toc:nil path:https://orgmode.org/worg/code/org-info-js/org-info-src.js
+#+title: Processo com Orchidea
+
+* Edit Orchidea Configuration File
+
+#+begin_src org :tangle orch.txt
+  ; Orchidea configuration file for String Orchestra piece 2023
+  ; DATABASE AND ORCHESTRA -------------------------------------------------------
+  db_files /Volumes/three/Orchidea/OrchideaSOL2020.spectrum.db
+  sound_paths /Volumes/three/Orchidea/OrchideaSOL2020/
+   orchestra Vn Vn Va Vc Cb
+
+  ; orchestra Vn | Vn+S | Vn+SP Vn | Vn+S | Vn+SP Va | Va+S | Va+SP Vc | Vc+S | Vc+SP Cb | Cb+S
+
+  ; styles ord
+  styles ord art_harm art_harm_trem behind_bridge behind_fngrbrd behind_frog legno_tratto ord_closed ord_hi_reg ord_open pont
+  ; styles ord art_harm art_harm_trem behind_bridge behind_fngrbrd behind_frog legno_tratto ord_closed ord_hi_reg ord_open pont pont_trem vib tasto_trem trem trem_and_fngrtip
+
+  ;styles aeol aeol_and_ord art_harm art_harm_trem behind_bridge behind_fngrbrd behind_frog bisb bisb_and_stick blow blow_no_reed brassy breath cluster_and_nail_hi cluster_and_nail_lo cluster_and_nail_mid cluster_hi cluster_lo cluster_mid damp dbl_tng dsclrd_fngr flatt flatt_closed flatt_hi_reg flatt_no_mthpc flatt_open flatt_stopped growl harm_fngr jet_wh key_cl kiss legno_batt legno_tratto ord ord_closed ord_hi_reg ord_open pdl_tone pizz_bartok pizz_lv pizz_sec pont pont_trem reg_combi sfz slap slap_unp sngl_tng stopped tasto_trem trem trem_and_fngrtip vib whst_tn
+
+  ;others				2c 4c
+  ; this grep will only use sounds in the 5th octave
+  ; grep_search         .*-.*-.*5-
+
+  dynamics			ppp pp p mp 
+
+
+  ; OPTIMIZATION -----------------------------------------------------------------
+  pop_size			300
+  max_epochs		        300
+
+  pursuit			5
+
+  xover_rate	        0.08
+  mutation_rate		0.05
+
+  sparsity		0 ; 0.1
+
+  positive_penalization 	0.5
+  negative_penalization 	10
+
+  hysteresis 0
+
+  regularization 0
+
+  ; TARGET -----------------------------------------------------------------------
+  segmentation		flux
+  partials_window		1024 ; 32768; 1024 ; 8192 ;  1024 ;8192 ;32768
+  partials_filtering		0
+  partials_filtering_threshold_db -90
+
+  partials_dampening_highend_cutoff   10000
+  partials_dampening_highend_exponent 1
+  extra_pitches			N
+
+  ; DYNAMIC ORCHESTRATION --------------------------------------------------------
+  ; > 1 é estático
+  onsets_threshold		1
+  onsets_timegate		0.1
+
+  ; EXPORT -----------------------------------------------------------------------
+  export_solutions		0
+  bypass_reverb 0
+  t60				2.8
+  dry_wet				.8 .4 
+  multichannel_output 0
+  normalize_output 0
+  compensate_gain 0
+#+end_src
+
+* Run Orchidea
+
+#+begin_src eshell :async
+  ~/github/orchidea07.bin/orchestrate ~/Composição/2023/cordas-base/spectra/bcl07_loopbank.wav ./orch.txt
+#+end_src
+
+#+begin_src eshell :async
+  ~/github/orchidea07.bin/orchestrate ~/Composição/2023/cordas-base/cordas/segments/A/connection_bcl07-1.txt ./orch.txt
+#+end_src
+#+RESULTS:
+: [orchidea, ver. 0.7]
+: 
+: orchestrate: computer-assisted orchestration
+: (c) 2022, www.orch-idea.org
+: 
+: loading configuration... done
+: parameters.............. 0.08, 0.05, 0
+: loading databases....... done (13265 entries)
+: analysing target........ abort trap: 6
+
+
+
+* results
+#+begin_src elisp
+  (play-sound-file "~/Composição/2023/cordas-base/cordas/segments/A/connection.wav")
+#+end_src
+
+#+RESULTS:
+: #<process afplay>
+
+  
+#+begin_src elisp
+  (play-sound-file "~/Composição/2023/cordas-base/cordas/segments/A/connection_bcl07-3.wav")
+#+end_src
+
+#+RESULTS:
+: #<process afplay>
+
+#+begin_src elisp
+  (play-sound-file "~/Composição/2023/cordas-base/spectra/bcl07.wav")
+#+end_src
+
+#+RESULTS:
+: #<process afplay<1>>
+
+#+begin_src elisp
+  (rename-file "connection.wav" "connection_bcl07-3.wav")
+  (rename-file "connection.txt" "connection_bcl07-3.txt")
+#+end_src
+
+#+RESULTS:
+
+
+
+
+
+

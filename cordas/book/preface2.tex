@@ -1,0 +1,153 @@
+\documentclass{article}
+%% Additional note from LLT: you don't need fontspec or xelatex for reledmac or reledpar to work. However, if your document _does_ involve different languages with different scripts/fonts (e.g. English and Greek or Arabic etc), then it's a good idea to use those packages -- see https://www.overleaf.com/read/wfdxqhcyyjxz for an example
+%
+% \usepackage{polyglossia}
+% \usepackage{libertine}
+% \setmainlanguage{english}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+
+\usepackage[series={},nocritical,noend,noeledsec,nofamiliar,noledgroup]{reledmac}
+% \usepackage{reledmac}
+\usepackage{reledpar}
+
+
+\begin{document}
+
+\date{(taken from the reledmac documentation)}
+\title{Setting Parallel Texts with reledpar}
+\maketitle
+
+\begin{abstract}
+This file provides two minimal examples of typesetting parallel texts with reledmac plus reledpar. 
+
+The first minimal example is parallel typesetting in columns, the second one is parallel typesetting in pages.
+\end{abstract}
+
+
+\begin{pairs}
+    \begin{Leftside}
+        \beginnumbering
+            \pstart
+                Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph.
+            \pend
+            \pstart`
+                Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.
+            \pend
+        \endnumbering
+    \end{Leftside}
+    \begin{Rightside}
+        \beginnumbering
+            \pstart
+                Right side paragraph. Right side paragraph. Right side paragraph. Right side paragraph.
+            \pend
+            \pstart
+                Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph.
+            \pend
+        \endnumbering
+    \end{Rightside}
+
+\end{pairs} 
+\Columns
+
+\begin{pages}
+    \begin{Leftside}
+        \beginnumbering
+            \pstart
+                Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph. Left side paragraph.
+            \pend
+            \pstart
+                Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.  Other left side paragraph.
+            \pend
+        \endnumbering
+    \end{Leftside}
+    \begin{Rightside}
+        \beginnumbering
+            \pstart
+                Right side paragraph. Right side paragraph. Right side paragraph. Right side paragraph.
+            \pend
+            \pstart
+                Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph. Other right side paragraph.
+            \pend
+        \endnumbering
+    \end{Rightside}
+
+\end{pages} 
+\Pages
+
+\end{document}
+
+
+
+
+
+
+
+
+
+% \documentclass[12pt]{article}
+% \usepackage{parallel}
+% % \usepackage{nopageno}
+% % \linespread{1.9}
+% % \textwidth10.5cm
+% % \textheight14cm
+% \begin{document}
+% \begin{Parallel}[v]{0.45\textwidth}{0.45\textwidth}
+  
+%   \ParallelLText{
+%     \section* {Apresentação}
+
+%     ``Substâncias de uma sanga sem nome'' é um dos resultados de uma pesquisa artística que investiga a imaginação criadora em música inspirada em Gaston Bachelard. A imaginação da liquidez do material musical motiva a composição e pode motivar a performance e escuta da peça. Os complexos espectrais presentes na peça estão sempre a se formar e se deformar, sempre em devir. Assim, a peça convida orquestra e ouvintes a imergirem nesta ambiência sonora de temperamento e andamento fluidos.
+%   }
+  
+% \ParallelRText{
+%   \section* {Presentation}
+
+%   ``Substâncias de uma sanga sem nome'' could be translated as ``substances of a nameless stream''. The piece is the first outcome of an artistic research that investigates the creative imagination in music from Gaston Bachelard's poetics. The imagination of liquidity of musical material motivates the composition and can inspire the performance and the listening experience. The spectral complexes in the piece are always forming and deforming, always becoming. Thus, it invites orchestra and listeners to immerse themselves in this sound ambience of fluid temperament and tempo.}
+
+% \ParallelPar
+
+% \ParallelLText{
+ 
+
+   
+% %   \begin{itemize}
+% %   \item Todos os naipes apresentam divisi a dois
+% % \item Não há necessidade de afinar os quartos de tom precisamente;
+% % \item Trêmolos: sempre o mais rápido possível;
+% % \item Posições de arco:
+% %   \begin{description}
+% %   \item[st] sul tasto
+% %   \end{description}
+% % \end{itemize}
+
+% % st.: sul tasto; sp.: sul ponticello; esp.: extremamente sul ponticello; ord.: posição ordinária
+
+% % "
+
+% % arco = "
+% % st.: sul tasto
+
+
+% % sp.: sul ponticello
+
+
+% % esp.: extremamente sul ponticello
+
+
+% % ord.: posição ordinária
+
+%  }
+%  \ParallelRText{
+   
+% }
+% \end{Parallel}
+% \end{document}
+
+
+
+% tlmgr: package repository https://ftp.math.utah.edu/pub/tex/historic/systems/texlive/2022/tlnet-final/ (not verified: valid signature with expired key)
+% 

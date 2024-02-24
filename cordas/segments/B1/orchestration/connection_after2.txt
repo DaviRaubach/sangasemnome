@@ -1,0 +1,211 @@
+[ orchestra Vn Vn+S Vn+SP Vn Vn+S Vn+SP Va Va+S Va+SP Vc Vc+S Vc+SP Cb Cb+S ]
+[ segment 0 5665.67
+	[ solution 1
+		[ note 5665.67 Vn trem G#4 pp 4c /Strings/Violin/tremolo/Vn-trem-G#4-pp-4c-N.wav 0 ]
+		[ note 5665.67 Vn trem D6 pp 1c /Strings/Violin/tremolo/Vn-trem-D6-pp-1c-T13d.wav 0 ]
+		[ note 5665.67 Va trem A#4 pp 4c /Strings/Viola/tremolo/Va-trem-A#4-pp-4c-N.wav 0 ]
+		[ note 5665.67 Vc trem A3 pp 1c /Strings/Violoncello/tremolo/Vc-trem-A3-pp-1c-T13u.wav 0 ]
+	]
+]
+[ segment 5665.67 325.079
+	[ solution 25
+		[ note 325.079 Vn+S ord A#4 pp 2c /Strings/Violin+sordina/ordinario/Vn+S-ord-A#4-pp-2c-T11u.wav 0 ]
+	]
+]
+[ segment 5990.75 650.136
+	[ solution 1
+		[ note 650.136 Vn+S trem A6 pp 1c /Strings/Violin+sordina/tremolo/Vn+S-trem-A6-pp-1c-T22d_R100d.wav 0 ]
+	]
+]
+[ segment 6640.88 185.76
+	[ solution 1
+		[ note 185.76 Vn trem B6 pp 1c /Strings/Violin/tremolo/Vn-trem-B6-pp-1c-N.wav 0 ]
+		[ note 185.76 Vn+S trem F5 pp 1c /Strings/Violin+sordina/tremolo/Vn+S-trem-F5-pp-1c-R100u.wav 0 ]
+		[ note 185.76 Vc ord D#5 pp 1c /Strings/Violoncello/ordinario/Vc-ord-D#5-pp-1c-T10d.wav 0 ]
+		[ note 185.76 Vc+S ord G5 pp 1c /Strings/Violoncello+sordina/ordinario/Vc+S-ord-G5-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 6826.67 185.737
+	[ solution 1
+		[ note 185.737 Vn trem A#6 pp 1c /Strings/Violin/tremolo/Vn-trem-A#6-pp-1c-N.wav 0 ]
+		[ note 185.737 Vc trem A3 pp 1c /Strings/Violoncello/tremolo/Vc-trem-A3-pp-1c-T13u.wav 0 ]
+		[ note 185.737 Vc+S ord D5 pp 1c /Strings/Violoncello+sordina/ordinario/Vc+S-ord-D5-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 7012.43 325.079
+	[ solution 16
+		[ note 325.079 Vn trem B6 pp 1c /Strings/Violin/tremolo/Vn-trem-B6-pp-1c-N.wav 0 ]
+		[ note 325.079 Vc trem D5 pp 1c /Strings/Violoncello/tremolo/Vc-trem-D5-pp-1c-N.wav 0 ]
+		[ note 325.079 Vc+S ord G5 pp 1c /Strings/Violoncello+sordina/ordinario/Vc+S-ord-G5-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 7337.51 185.737
+	[ solution 3
+		[ note 185.737 Vn trem E5 pp 2c /Strings/Violin/tremolo/Vn-trem-E5-pp-2c-N.wav 0 ]
+		[ note 185.737 Cb trem D#3 pp 1c /Strings/Contrabass/tremolo/Cb-trem-D#3-pp-1c-T34u.wav 0 ]
+	]
+]
+[ segment 7523.27 185.737
+	[ solution 9
+		[ note 185.737 Vn trem F5 pp 1c /Strings/Violin/tremolo/Vn-trem-F5-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 7709 185.737
+	[ solution 1
+		[ note 185.737 Vn ord A5 pp 2c /Strings/Violin/ordinario/Vn-ord-A5-pp-2c-N.wav 0 ]
+		[ note 185.737 Vn+S trem E5 pp 1c /Strings/Violin+sordina/tremolo/Vn+S-trem-E5-pp-1c-N.wav 0 ]
+		[ note 185.737 Vc trem A#4 pp 1c /Strings/Violoncello/tremolo/Vc-trem-A#4-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 7894.76 232.2
+	[ solution 3
+		[ note 232.2 Vn+S trem E6 pp 1c /Strings/Violin+sordina/tremolo/Vn+S-trem-E6-pp-1c-N.wav 0 ]
+		[ note 557.234 Vc+S ord F5 pp 1c /Strings/Violoncello+sordina/ordinario/Vc+S-ord-F5-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 8126.98 185.737
+	[ solution 2
+		[ note 185.737 Vn+S ord D#5 pp 2c /Strings/Violin+sordina/ordinario/Vn+S-ord-D#5-pp-2c-N.wav 0 ]
+	]
+]
+[ segment 8312.74 139.297
+	[ solution 3
+		[ note 139.297 Vn+S trem A#5 pp 2c /Strings/Violin+sordina/tremolo/Vn+S-trem-A#5-pp-2c-R300d.wav 0 ]
+	]
+]
+[ segment 8452.06 139.297
+	[ solution 7
+		[ note 139.297 Vn+S trem A#3 pp 4c /Strings/Violin+sordina/tremolo/Vn+S-trem-A#3-pp-4c-N.wav 0 ]
+	]
+]
+[ segment 8591.36 139.32
+	[ solution 2
+		[ note 139.32 Vn+S trem A#6 pp 1c /Strings/Violin+sordina/tremolo/Vn+S-trem-A#6-pp-1c-T22d.wav 0 ]
+		[ note 139.32 Vn trem E5 pp 1c /Strings/Violin/tremolo/Vn-trem-E5-pp-1c-N.wav 0 ]
+		[ note 464.354 Vc+S ord F5 pp 1c /Strings/Violoncello+sordina/ordinario/Vc+S-ord-F5-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 8730.7 185.737
+	[ solution 1
+		[ note 185.737 Vn+S trem F5 pp 2c /Strings/Violin+sordina/tremolo/Vn+S-trem-F5-pp-2c-R100d.wav 0 ]
+		[ note 185.737 Cb ord C3 pp 1c /Strings/Contrabass/ordinario/Cb-ord-C3-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 8916.46 139.297
+	[ solution 1
+		[ note 139.297 Va trem F5 pp 2c /Strings/Viola/tremolo/Va-trem-F5-pp-2c-N.wav 0 ]
+		[ note 139.297 Vc trem E2 pp 4c /Strings/Violoncello/tremolo/Vc-trem-E2-pp-4c-T12d.wav 0 ]
+	]
+]
+[ segment 9055.78 325.057
+	[ solution 2
+		[ note 325.057 Vn ord F5 pp 2c /Strings/Violin/ordinario/Vn-ord-F5-pp-2c-N.wav 0 ]
+		[ note 325.057 Va+S ord A#4 pp 1c /Strings/Viola+sordina/ordinario/Va+S-ord-A#4-pp-1c-T10u.wav 0 ]
+		[ note 325.057 Vc trem G#2 pp 3c /Strings/Violoncello/tremolo/Vc-trem-G#2-pp-3c-T21d.wav 0 ]
+	]
+]
+[ segment 9380.84 139.32
+	[ solution 6
+		[ note 139.32 Vn+S trem F5 pp 2c /Strings/Violin+sordina/tremolo/Vn+S-trem-F5-pp-2c-R100d.wav 0 ]
+		[ note 139.32 Vc+S ord F5 pp 1c /Strings/Violoncello+sordina/ordinario/Vc+S-ord-F5-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 9520.18 232.2
+	[ solution 4
+		[ note 232.2 Va trem F4 pp 2c /Strings/Viola/tremolo/Va-trem-F4-pp-2c-N.wav 0 ]
+		[ note 232.2 Cb trem E1 pp 4c /Strings/Contrabass/tremolo/Cb-trem-E1-pp-4c-N.wav 0 ]
+	]
+]
+[ segment 9752.38 278.617
+	[ solution 7
+		[ note 278.617 Vn+S trem F5 pp 2c /Strings/Violin+sordina/tremolo/Vn+S-trem-F5-pp-2c-R100d.wav 0 ]
+	]
+]
+[ segment 10031 139.32
+	[ solution 5
+		[ note 139.32 Vc+S ord F5 pp 1c /Strings/Violoncello+sordina/ordinario/Vc+S-ord-F5-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 10170.3 185.737
+	[ solution 9
+		[ note 185.737 Vn trem F5 pp 3c /Strings/Violin/tremolo/Vn-trem-F5-pp-3c-T21u.wav 0 ]
+	]
+]
+[ segment 10356.1 139.297
+	[ solution 1
+		[ note 139.297 Vn trem F5 pp 2c /Strings/Violin/tremolo/Vn-trem-F5-pp-2c-N.wav 0 ]
+		[ note 139.297 Vn+S trem F5 pp 2c /Strings/Violin+sordina/tremolo/Vn+S-trem-F5-pp-2c-R100d.wav 0 ]
+		[ note 139.297 Vc trem C3 pp 4c /Strings/Violoncello/tremolo/Vc-trem-C3-pp-4c-N.wav 0 ]
+	]
+]
+[ segment 10495.4 185.737
+	[ solution 17
+		[ note 185.737 Vc+S ord F5 pp 1c /Strings/Violoncello+sordina/ordinario/Vc+S-ord-F5-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 10681.2 185.737
+	[ solution 1
+		[ note 185.737 Vn+S trem B5 pp 1c /Strings/Violin+sordina/tremolo/Vn+S-trem-B5-pp-1c-R100u.wav 0 ]
+		[ note 185.737 Va+S ord C#3 pp 4c /Strings/Viola+sordina/ordinario/Va+S-ord-C#3-pp-4c-T19u.wav 0 ]
+		[ note 185.737 Vc trem A#3 pp 3c /Strings/Violoncello/tremolo/Vc-trem-A#3-pp-3c-N.wav 0 ]
+		[ note 185.737 Cb trem C3 pp 3c /Strings/Contrabass/tremolo/Cb-trem-C3-pp-3c-T11u.wav 0 ]
+	]
+]
+[ segment 10866.9 325.079
+	[ solution 5
+		[ note 325.079 Vn trem F4 pp 4c /Strings/Violin/tremolo/Vn-trem-F4-pp-4c-T11u.wav 0 ]
+		[ note 510.816 Vn+S trem F5 pp 1c /Strings/Violin+sordina/tremolo/Vn+S-trem-F5-pp-1c-R100u.wav 0 ]
+		[ note 325.079 Vc trem G2 pp 3c /Strings/Violoncello/tremolo/Vc-trem-G2-pp-3c-N.wav 0 ]
+	]
+]
+[ segment 11192 185.737
+	[ solution 5
+		[ note 185.737 Vc+S ord D2 pp 4c /Strings/Violoncello+sordina/ordinario/Vc+S-ord-D2-pp-4c-N.wav 0 ]
+	]
+]
+[ segment 11377.8 278.617
+	[ solution 3
+		[ note 278.617 Vn trem F4 pp 4c /Strings/Violin/tremolo/Vn-trem-F4-pp-4c-T11u.wav 0 ]
+		[ note 278.617 Va trem A3 pp 4c /Strings/Viola/tremolo/Va-trem-A3-pp-4c-T13u.wav 0 ]
+		[ note 278.617 Vc trem G4 pp 1c /Strings/Violoncello/tremolo/Vc-trem-G4-pp-1c-N.wav 0 ]
+		[ note 278.617 Cb trem B1 pp 4c /Strings/Contrabass/tremolo/Cb-trem-B1-pp-4c-N.wav 0 ]
+	]
+]
+[ segment 11656.4 185.737
+	[ solution 1
+		[ note 185.737 Vn+S trem F5 pp 3c /Strings/Violin+sordina/tremolo/Vn+S-trem-F5-pp-3c-T10d.wav 0 ]
+		[ note 185.737 Cb trem D3 pp 1c /Strings/Contrabass/tremolo/Cb-trem-D3-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 11842.2 278.639
+	[ solution 1
+		[ note 278.639 Vc trem D2 pp 4c /Strings/Violoncello/tremolo/Vc-trem-D2-pp-4c-T17u.wav 0 ]
+		[ note 278.639 Cb trem C3 pp 2c /Strings/Contrabass/tremolo/Cb-trem-C3-pp-2c-T23u.wav 0 ]
+	]
+]
+[ segment 12120.8 371.497
+	[ solution 8
+		[ note 371.497 Vn+S trem F#4 pp 4c /Strings/Violin+sordina/tremolo/Vn+S-trem-F#4-pp-4c-T11d_R100d.wav 0 ]
+		[ note 371.497 Va trem F5 pp 3c /Strings/Viola/tremolo/Va-trem-F5-pp-3c-N.wav 0 ]
+		[ note 371.497 Cb+S ord B2 pp 1c /Strings/Contrabass+sordina/ordinario/Cb+S-ord-B2-pp-1c-N.wav 0 ]
+	]
+]
+[ segment 12492.3 278.639
+	[ solution 1
+		[ note 278.639 Vn trem F5 pp 3c /Strings/Violin/tremolo/Vn-trem-F5-pp-3c-T21u.wav 0 ]
+		[ note 278.639 Vc trem D2 pp 4c /Strings/Violoncello/tremolo/Vc-trem-D2-pp-4c-T17u.wav 0 ]
+	]
+]
+[ segment 12771 1532.49
+	[ solution 2
+		[ note 1532.49 Vn ord F4 pp 4c /Strings/Violin/ordinario/Vn-ord-F4-pp-4c-N.wav 0 ]
+		[ note 1532.49 Vc+S ord D2 pp 4c /Strings/Violoncello+sordina/ordinario/Vc+S-ord-D2-pp-4c-N.wav 0 ]
+		[ note 1532.49 Cb trem B1 pp 4c /Strings/Contrabass/tremolo/Cb-trem-B1-pp-4c-N.wav 0 ]
+	]
+]
+[ segment 14303.5 59.3651
+	[ solution 7
+		[ note 59.3651 Vn trem F5 pp 3c /Strings/Violin/tremolo/Vn-trem-F5-pp-3c-T21u.wav 0 ]
+		[ note 59.3651 Vc ord B2 pp 3c /Strings/Violoncello/ordinario/Vc-ord-B2-pp-3c-N.wav 0 ]
+	]
+]

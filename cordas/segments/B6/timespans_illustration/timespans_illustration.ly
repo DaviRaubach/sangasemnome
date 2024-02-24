@@ -1,0 +1,664 @@
+\version "2.25.5"
+\language "english"
+#(set-default-paper-size "a3")
+\markup {\vspace #0 \fontsize #2 {Cada linha representa um naipe.}} 
+\markup \column {
+\overlay {
+\translate #'(1.0 . 1)
+\sans \fontsize #-3 \center-align \fraction 1 8
+\translate #'(11.714285714285714 . 1)
+\sans \fontsize #-3 \center-align \fraction 1 4
+\translate #'(17.07142857142857 . 1)
+\sans \fontsize #-3 \center-align \fraction 5 16
+\translate #'(22.428571428571423 . 1)
+\sans \fontsize #-3 \center-align \fraction 3 8
+\translate #'(27.785714285714285 . 1)
+\sans \fontsize #-3 \center-align \fraction 7 16
+\translate #'(33.14285714285714 . 1)
+\sans \fontsize #-3 \center-align \fraction 1 2
+\translate #'(38.49999999999999 . 1)
+\sans \fontsize #-3 \center-align \fraction 9 16
+\translate #'(43.857142857142854 . 1)
+\sans \fontsize #-3 \center-align \fraction 5 8
+\translate #'(54.57142857142856 . 1)
+\sans \fontsize #-3 \center-align \fraction 3 4
+\translate #'(65.28571428571429 . 1)
+\sans \fontsize #-3 \center-align \fraction 7 8
+\translate #'(76.0 . 1)
+\sans \fontsize #-3 \center-align \fraction 1 1
+}
+\pad-to-box #'(0 . 73.99999999999999) #'(0 . 17.5)
+\postscript #"
+0.2 setlinewidth
+11.714285714285714 15.5 moveto
+33.14285714285714 15.5 lineto
+stroke
+11.714285714285714 16.25 moveto
+11.714285714285714 14.75 lineto
+stroke
+33.14285714285714 16.25 moveto
+33.14285714285714 14.75 lineto
+stroke
+33.14285714285714 15.5 moveto
+43.857142857142854 15.5 lineto
+stroke
+33.14285714285714 16.25 moveto
+33.14285714285714 14.75 lineto
+stroke
+43.857142857142854 16.25 moveto
+43.857142857142854 14.75 lineto
+stroke
+22.428571428571423 12.5 moveto
+43.857142857142854 12.5 lineto
+stroke
+22.428571428571423 13.25 moveto
+22.428571428571423 11.75 lineto
+stroke
+43.857142857142854 13.25 moveto
+43.857142857142854 11.75 lineto
+stroke
+43.857142857142854 12.5 moveto
+54.57142857142856 12.5 lineto
+stroke
+43.857142857142854 13.25 moveto
+43.857142857142854 11.75 lineto
+stroke
+54.57142857142856 13.25 moveto
+54.57142857142856 11.75 lineto
+stroke
+1 12.5 moveto
+22.428571428571423 12.5 lineto
+stroke
+1 13.25 moveto
+1 11.75 lineto
+stroke
+22.428571428571423 13.25 moveto
+22.428571428571423 11.75 lineto
+stroke
+22.428571428571423 9.5 moveto
+33.14285714285714 9.5 lineto
+stroke
+22.428571428571423 10.25 moveto
+22.428571428571423 8.75 lineto
+stroke
+33.14285714285714 10.25 moveto
+33.14285714285714 8.75 lineto
+stroke
+43.857142857142854 9.5 moveto
+65.28571428571429 9.5 lineto
+stroke
+43.857142857142854 10.25 moveto
+43.857142857142854 8.75 lineto
+stroke
+65.28571428571429 10.25 moveto
+65.28571428571429 8.75 lineto
+stroke
+38.49999999999999 9.5 moveto
+43.857142857142854 9.5 lineto
+stroke
+38.49999999999999 10.25 moveto
+38.49999999999999 8.75 lineto
+stroke
+43.857142857142854 10.25 moveto
+43.857142857142854 8.75 lineto
+stroke
+17.07142857142857 9.5 moveto
+22.428571428571423 9.5 lineto
+stroke
+17.07142857142857 10.25 moveto
+17.07142857142857 8.75 lineto
+stroke
+22.428571428571423 10.25 moveto
+22.428571428571423 8.75 lineto
+stroke
+27.785714285714285 6.5 moveto
+33.14285714285714 6.5 lineto
+stroke
+27.785714285714285 7.25 moveto
+27.785714285714285 5.75 lineto
+stroke
+33.14285714285714 7.25 moveto
+33.14285714285714 5.75 lineto
+stroke
+33.14285714285714 6.5 moveto
+43.857142857142854 6.5 lineto
+stroke
+33.14285714285714 7.25 moveto
+33.14285714285714 5.75 lineto
+stroke
+43.857142857142854 7.25 moveto
+43.857142857142854 5.75 lineto
+stroke
+43.857142857142854 6.5 moveto
+54.57142857142856 6.5 lineto
+stroke
+43.857142857142854 7.25 moveto
+43.857142857142854 5.75 lineto
+stroke
+54.57142857142856 7.25 moveto
+54.57142857142856 5.75 lineto
+stroke
+54.57142857142856 6.5 moveto
+76 6.5 lineto
+stroke
+54.57142857142856 7.25 moveto
+54.57142857142856 5.75 lineto
+stroke
+76 7.25 moveto
+76 5.75 lineto
+stroke
+22.428571428571423 3.5 moveto
+33.14285714285714 3.5 lineto
+stroke
+22.428571428571423 4.25 moveto
+22.428571428571423 2.75 lineto
+stroke
+33.14285714285714 4.25 moveto
+33.14285714285714 2.75 lineto
+stroke
+33.14285714285714 3.5 moveto
+54.57142857142856 3.5 lineto
+stroke
+33.14285714285714 4.25 moveto
+33.14285714285714 2.75 lineto
+stroke
+54.57142857142856 4.25 moveto
+54.57142857142856 2.75 lineto
+stroke
+33.14285714285714 0.5 moveto
+43.857142857142854 0.5 lineto
+stroke
+33.14285714285714 1.25 moveto
+33.14285714285714 -0.25 lineto
+stroke
+43.857142857142854 1.25 moveto
+43.857142857142854 -0.25 lineto
+stroke
+43.857142857142854 0.5 moveto
+54.57142857142856 0.5 lineto
+stroke
+43.857142857142854 1.25 moveto
+43.857142857142854 -0.25 lineto
+stroke
+54.57142857142856 1.25 moveto
+54.57142857142856 -0.25 lineto
+stroke
+22.428571428571423 0.5 moveto
+33.14285714285714 0.5 lineto
+stroke
+22.428571428571423 1.25 moveto
+22.428571428571423 -0.25 lineto
+stroke
+33.14285714285714 1.25 moveto
+33.14285714285714 -0.25 lineto
+stroke
+0.1 setlinewidth
+[ 0.1 0.2 ] 0 setdash
+1 17.5 moveto
+1 13 lineto
+stroke
+11.714285714285714 17.5 moveto
+11.714285714285714 16 lineto
+stroke
+17.07142857142857 17.5 moveto
+17.07142857142857 10 lineto
+stroke
+22.428571428571423 17.5 moveto
+22.428571428571423 1 lineto
+stroke
+27.785714285714285 17.5 moveto
+27.785714285714285 7 lineto
+stroke
+33.14285714285714 17.5 moveto
+33.14285714285714 1 lineto
+stroke
+38.49999999999999 17.5 moveto
+38.49999999999999 10 lineto
+stroke
+43.857142857142854 17.5 moveto
+43.857142857142854 1 lineto
+stroke
+54.57142857142856 17.5 moveto
+54.57142857142856 1 lineto
+stroke
+65.28571428571429 17.5 moveto
+65.28571428571429 10 lineto
+stroke
+76 17.5 moveto
+76 7 lineto
+stroke
+0 0 moveto
+0.99 setgray
+0 0.01 rlineto
+stroke"
+}
+\markup {\vspace #4  \bold \fontsize #2 {Textura total separada por materiais:}} 
+\markup \column {
+\overlay {
+\translate #'(1.0 . 1)
+\sans \fontsize #-3 \center-align \fraction 0 1
+\translate #'(17.666666666666668 . 1)
+\sans \fontsize #-3 \center-align \fraction 1 8
+\translate #'(34.333333333333336 . 1)
+\sans \fontsize #-3 \center-align \fraction 1 4
+\translate #'(42.66666666666667 . 1)
+\sans \fontsize #-3 \center-align \fraction 5 16
+\translate #'(51.0 . 1)
+\sans \fontsize #-3 \center-align \fraction 3 8
+\translate #'(59.333333333333336 . 1)
+\sans \fontsize #-3 \center-align \fraction 7 16
+\translate #'(67.66666666666667 . 1)
+\sans \fontsize #-3 \center-align \fraction 1 2
+\translate #'(76.0 . 1)
+\sans \fontsize #-3 \center-align \fraction 9 16
+\translate #'(84.33333333333334 . 1)
+\sans \fontsize #-3 \center-align \fraction 5 8
+\translate #'(101.0 . 1)
+\sans \fontsize #-3 \center-align \fraction 3 4
+\translate #'(117.66666666666667 . 1)
+\sans \fontsize #-3 \center-align \fraction 7 8
+\translate #'(134.33333333333334 . 1)
+\sans \fontsize #-3 \center-align \fraction 1 1
+\translate #'(151.0 . 1)
+\sans \fontsize #-3 \center-align \fraction 9 8
+}
+\pad-to-box #'(0 . 115.66666666666667) #'(0 . 80.5)
+\postscript #"
+0.2 setlinewidth
+1 78.5 moveto
+34.333333333333336 78.5 lineto
+stroke
+1 79.25 moveto
+1 77.75 lineto
+stroke
+34.333333333333336 79.25 moveto
+34.333333333333336 77.75 lineto
+stroke
+1 75.5 moveto
+51 75.5 lineto
+stroke
+1 76.25 moveto
+1 74.75 lineto
+stroke
+51 76.25 moveto
+51 74.75 lineto
+stroke
+1 72.5 moveto
+17.666666666666668 72.5 lineto
+stroke
+1 73.25 moveto
+1 71.75 lineto
+stroke
+17.666666666666668 73.25 moveto
+17.666666666666668 71.75 lineto
+stroke
+1 69.5 moveto
+59.333333333333336 69.5 lineto
+stroke
+1 70.25 moveto
+1 68.75 lineto
+stroke
+59.333333333333336 70.25 moveto
+59.333333333333336 68.75 lineto
+stroke
+1 66.5 moveto
+76 66.5 lineto
+stroke
+1 67.25 moveto
+1 65.75 lineto
+stroke
+76 67.25 moveto
+76 65.75 lineto
+stroke
+1 63.5 moveto
+42.66666666666667 63.5 lineto
+stroke
+1 64.25 moveto
+1 62.75 lineto
+stroke
+42.66666666666667 64.25 moveto
+42.66666666666667 62.75 lineto
+stroke
+1 60.5 moveto
+67.66666666666667 60.5 lineto
+stroke
+1 61.25 moveto
+1 59.75 lineto
+stroke
+67.66666666666667 61.25 moveto
+67.66666666666667 59.75 lineto
+stroke
+1 57.5 moveto
+84.33333333333334 57.5 lineto
+stroke
+1 58.25 moveto
+1 56.75 lineto
+stroke
+84.33333333333334 58.25 moveto
+84.33333333333334 56.75 lineto
+stroke
+1 54.5 moveto
+51 54.5 lineto
+stroke
+1 55.25 moveto
+1 53.75 lineto
+stroke
+51 55.25 moveto
+51 53.75 lineto
+stroke
+1 51.5 moveto
+134.33333333333334 51.5 lineto
+stroke
+1 52.25 moveto
+1 50.75 lineto
+stroke
+134.33333333333334 52.25 moveto
+134.33333333333334 50.75 lineto
+stroke
+1 48.5 moveto
+151 48.5 lineto
+stroke
+1 49.25 moveto
+1 47.75 lineto
+stroke
+151 49.25 moveto
+151 47.75 lineto
+stroke
+1 45.5 moveto
+117.66666666666667 45.5 lineto
+stroke
+1 46.25 moveto
+1 44.75 lineto
+stroke
+117.66666666666667 46.25 moveto
+117.66666666666667 44.75 lineto
+stroke
+34.333333333333336 42.5 moveto
+67.66666666666667 42.5 lineto
+stroke
+34.333333333333336 43.25 moveto
+34.333333333333336 41.75 lineto
+stroke
+67.66666666666667 43.25 moveto
+67.66666666666667 41.75 lineto
+stroke
+51 39.5 moveto
+84.33333333333334 39.5 lineto
+stroke
+51 40.25 moveto
+51 38.75 lineto
+stroke
+84.33333333333334 40.25 moveto
+84.33333333333334 38.75 lineto
+stroke
+17.666666666666668 39.5 moveto
+51 39.5 lineto
+stroke
+17.666666666666668 40.25 moveto
+17.666666666666668 38.75 lineto
+stroke
+51 40.25 moveto
+51 38.75 lineto
+stroke
+59.333333333333336 36.5 moveto
+67.66666666666667 36.5 lineto
+stroke
+59.333333333333336 37.25 moveto
+59.333333333333336 35.75 lineto
+stroke
+67.66666666666667 37.25 moveto
+67.66666666666667 35.75 lineto
+stroke
+76 36.5 moveto
+84.33333333333334 36.5 lineto
+stroke
+76 37.25 moveto
+76 35.75 lineto
+stroke
+84.33333333333334 37.25 moveto
+84.33333333333334 35.75 lineto
+stroke
+42.66666666666667 36.5 moveto
+51 36.5 lineto
+stroke
+42.66666666666667 37.25 moveto
+42.66666666666667 35.75 lineto
+stroke
+51 37.25 moveto
+51 35.75 lineto
+stroke
+67.66666666666667 33.5 moveto
+84.33333333333334 33.5 lineto
+stroke
+67.66666666666667 34.25 moveto
+67.66666666666667 32.75 lineto
+stroke
+84.33333333333334 34.25 moveto
+84.33333333333334 32.75 lineto
+stroke
+84.33333333333334 33.5 moveto
+101 33.5 lineto
+stroke
+84.33333333333334 34.25 moveto
+84.33333333333334 32.75 lineto
+stroke
+101 34.25 moveto
+101 32.75 lineto
+stroke
+51 33.5 moveto
+67.66666666666667 33.5 lineto
+stroke
+51 34.25 moveto
+51 32.75 lineto
+stroke
+67.66666666666667 34.25 moveto
+67.66666666666667 32.75 lineto
+stroke
+67.66666666666667 30.5 moveto
+84.33333333333334 30.5 lineto
+stroke
+67.66666666666667 31.25 moveto
+67.66666666666667 29.75 lineto
+stroke
+84.33333333333334 31.25 moveto
+84.33333333333334 29.75 lineto
+stroke
+84.33333333333334 30.5 moveto
+101 30.5 lineto
+stroke
+84.33333333333334 31.25 moveto
+84.33333333333334 29.75 lineto
+stroke
+101 31.25 moveto
+101 29.75 lineto
+stroke
+51 30.5 moveto
+67.66666666666667 30.5 lineto
+stroke
+51 31.25 moveto
+51 29.75 lineto
+stroke
+67.66666666666667 31.25 moveto
+67.66666666666667 29.75 lineto
+stroke
+67.66666666666667 27.5 moveto
+84.33333333333334 27.5 lineto
+stroke
+67.66666666666667 28.25 moveto
+67.66666666666667 26.75 lineto
+stroke
+84.33333333333334 28.25 moveto
+84.33333333333334 26.75 lineto
+stroke
+84.33333333333334 27.5 moveto
+101 27.5 lineto
+stroke
+84.33333333333334 28.25 moveto
+84.33333333333334 26.75 lineto
+stroke
+101 28.25 moveto
+101 26.75 lineto
+stroke
+51 27.5 moveto
+67.66666666666667 27.5 lineto
+stroke
+51 28.25 moveto
+51 26.75 lineto
+stroke
+67.66666666666667 28.25 moveto
+67.66666666666667 26.75 lineto
+stroke
+84.33333333333334 24.5 moveto
+117.66666666666667 24.5 lineto
+stroke
+84.33333333333334 25.25 moveto
+84.33333333333334 23.75 lineto
+stroke
+117.66666666666667 25.25 moveto
+117.66666666666667 23.75 lineto
+stroke
+101 21.5 moveto
+134.33333333333334 21.5 lineto
+stroke
+101 22.25 moveto
+101 20.75 lineto
+stroke
+134.33333333333334 22.25 moveto
+134.33333333333334 20.75 lineto
+stroke
+67.66666666666667 21.5 moveto
+101 21.5 lineto
+stroke
+67.66666666666667 22.25 moveto
+67.66666666666667 20.75 lineto
+stroke
+101 22.25 moveto
+101 20.75 lineto
+stroke
+84.33333333333334 18.5 moveto
+134.33333333333334 18.5 lineto
+stroke
+84.33333333333334 19.25 moveto
+84.33333333333334 17.75 lineto
+stroke
+134.33333333333334 19.25 moveto
+134.33333333333334 17.75 lineto
+stroke
+134.33333333333334 18.5 moveto
+151 18.5 lineto
+stroke
+134.33333333333334 19.25 moveto
+134.33333333333334 17.75 lineto
+stroke
+151 19.25 moveto
+151 17.75 lineto
+stroke
+101 15.5 moveto
+151 15.5 lineto
+stroke
+101 16.25 moveto
+101 14.75 lineto
+stroke
+151 16.25 moveto
+151 14.75 lineto
+stroke
+67.66666666666667 12.5 moveto
+117.66666666666667 12.5 lineto
+stroke
+67.66666666666667 13.25 moveto
+67.66666666666667 11.75 lineto
+stroke
+117.66666666666667 13.25 moveto
+117.66666666666667 11.75 lineto
+stroke
+117.66666666666667 12.5 moveto
+134.33333333333334 12.5 lineto
+stroke
+117.66666666666667 13.25 moveto
+117.66666666666667 11.75 lineto
+stroke
+134.33333333333334 13.25 moveto
+134.33333333333334 11.75 lineto
+stroke
+101 9.5 moveto
+117.66666666666667 9.5 lineto
+stroke
+101 10.25 moveto
+101 8.75 lineto
+stroke
+117.66666666666667 10.25 moveto
+117.66666666666667 8.75 lineto
+stroke
+84.33333333333334 6.5 moveto
+134.33333333333334 6.5 lineto
+stroke
+84.33333333333334 7.25 moveto
+84.33333333333334 5.75 lineto
+stroke
+134.33333333333334 7.25 moveto
+134.33333333333334 5.75 lineto
+stroke
+101 3.5 moveto
+151 3.5 lineto
+stroke
+101 4.25 moveto
+101 2.75 lineto
+stroke
+151 4.25 moveto
+151 2.75 lineto
+stroke
+67.66666666666667 0.5 moveto
+117.66666666666667 0.5 lineto
+stroke
+67.66666666666667 1.25 moveto
+67.66666666666667 -0.25 lineto
+stroke
+117.66666666666667 1.25 moveto
+117.66666666666667 -0.25 lineto
+stroke
+0.1 setlinewidth
+[ 0.1 0.2 ] 0 setdash
+1 80.5 moveto
+1 46 lineto
+stroke
+17.666666666666668 80.5 moveto
+17.666666666666668 40 lineto
+stroke
+34.333333333333336 80.5 moveto
+34.333333333333336 43 lineto
+stroke
+42.66666666666667 80.5 moveto
+42.66666666666667 37 lineto
+stroke
+51 80.5 moveto
+51 28 lineto
+stroke
+59.333333333333336 80.5 moveto
+59.333333333333336 37 lineto
+stroke
+67.66666666666667 80.5 moveto
+67.66666666666667 1 lineto
+stroke
+76 80.5 moveto
+76 37 lineto
+stroke
+84.33333333333334 80.5 moveto
+84.33333333333334 7 lineto
+stroke
+101 80.5 moveto
+101 4 lineto
+stroke
+117.66666666666667 80.5 moveto
+117.66666666666667 1 lineto
+stroke
+134.33333333333334 80.5 moveto
+134.33333333333334 7 lineto
+stroke
+151 80.5 moveto
+151 4 lineto
+stroke
+0 0 moveto
+0.99 setgray
+0 0.01 rlineto
+stroke"
+}

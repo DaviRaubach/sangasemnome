@@ -1,0 +1,5 @@
+* [x] acertar métrica
+* [ ] acertar harmônicos e transposições
+* [ ] fazer próximas entradas (vn1 +14; vn2 +7; va -12; cb -24)
+* [ ] resolver duração total para um final ok
+

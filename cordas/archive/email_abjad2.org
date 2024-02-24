@@ -1,0 +1,131 @@
+Well, in Brazil we call it gambiarra.
+
+The code bellow follows these steps:
+- Get the name and  durations of containers and store in variables
+- Extract containers content
+- Split and rewrite extracted content according to time signatures
+- Split the result again according to the original containers durations
+- Set the original name and identifier for each container
+
+So, the problem is kind of solved. But I would appreciate any thought on it.
+
+Obs.: The image illustrates the result on my actual code. 
+
+Davi
+
+#+begin_src python  :results output
+import abjad
+
+material_a = abjad.Container(r"r2 r16", name="a", identifier="% a")
+material_b = abjad.Container(r"c'2 ~ c'16", name="b", identifier="% b")
+material_c = abjad.Container(r"c'8.", name="c", identifier="% c")
+material_d = abjad.Container(r"c'4", name="d", identifier="% d")
+material_e = abjad.Container(r"r2 r8.", name="e", identifier="% e")
+
+container_test1 = abjad.Container(
+    [material_a, material_b, material_c,
+     material_d, material_e]
+)
+print("written:", abjad.lilypond(container_test1))
+print("original container:", container_test1)
+time_signatures = [abjad.TimeSignature((5, 4)), abjad.TimeSignature((4, 4))]
+
+def rewrite_meter(
+    main_container,
+    time_signatures,
+    boundary_depth=0,
+    rewrite_tuplets=True,
+    maximum_dot_count=1,
+):
+    """Rewrite meter according to ``abjad.TimeSignature`` or ``tuple`` list."""
+    if isinstance(time_signatures[0], abjad.TimeSignature):
+        durations = [_.duration for _ in time_signatures]
+    else:
+        time_signatures = [abjad.TimeSignature(_) for _ in time_signatures]
+        durations = time_signatures
+    if main_container:
+        materials_durations = []
+        materials_names = []
+        for container in main_container:
+            materials_durations.append(container._get_duration())
+            materials_names.append(container.name)
+        for _ in main_container:
+            abjad.mutate.extract(_)
+        shards = abjad.mutate.split(main_container[:], durations)
+        print("split container:", shards)
+        for shard, time_signature in zip(shards, time_signatures):
+            abjad.Meter.rewrite_meter(
+                shard,
+                time_signature,
+                boundary_depth=boundary_depth,
+                rewrite_tuplets=rewrite_tuplets,
+                maximum_dot_count=maximum_dot_count,
+            )
+        shards = abjad.mutate.split(main_container, materials_durations)
+        new_containers = abjad.Container()
+        for shard, name in zip(shards, materials_names):
+            for container in shard:
+                container.name = name
+                container.identifier = "% " + name
+                new_containers.append(container)
+
+        return new_containers
+
+
+container_test1 = rewrite_meter(container_test1, time_signatures)
+print("rewritten:", abjad.lilypond(container_test1))
+#+end_src
+
+#+RESULTS:
+#+begin_example
+written: {
+    {   % a
+        r2
+        r16
+    }   % a
+    {   % b
+        c'2
+        ~
+        c'16
+    }   % b
+    {   % c
+        c'8.
+    }   % c
+    {   % d
+        c'4
+    }   % d
+    {   % e
+        r2
+        r8.
+    }   % e
+}
+original container: Container("{ r2 r16 } { c'2 c'16 } { c'8. } { c'4 } { r2 r8. }")
+split container: [[Rest('r2'), Rest('r16'), Note("c'2"), Note("c'16"), Note("c'8")], [Note("c'16"), Note("c'4"), Rest('r2'), Rest('r8.')]]
+rewritten: {
+    {   % a
+        r2
+        r16
+    }   % a
+    {   % b
+        c'8.
+        ~
+        c'4.
+    }   % b
+    {   % c
+        c'8
+        ~
+        c'16
+    }   % c
+    {   % d
+        c'8.
+        ~
+        c'16
+    }   % d
+    {   % e
+        r8.
+        r2
+    }   % e
+}
+#+end_example
+
+[[file:~/Desktop/Captura de Tela 2023-06-05 às 12.10.41.png]]

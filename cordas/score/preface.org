@@ -1,0 +1,30 @@
+# #+title: Substâncias sem nome
+# #+subtitle: para orquestra de cordas
+# #+author: Davi Raubach
+# #+date: 2024
+#+LATEX_HEADER: \usepackage{nopageno}
+#+LATEX_CLASS: minimal
+# #+LATEX_CLASS_OPTIONS: [article,12pt,openany,oneside,a4paper,english,brazil,sumario=tradicional]
+#+OPTIONS: toc:nil
+#+LANGUAGE: pt-br
+
+* Apresentação
+Substâncias sem nome é um dos resultados de uma pesquisa artística que investiga a imaginação criadora em música inspirada em Gaston Bachelard. A imaginação da liquidez do material musical motiva a composição e pode motivar a performance e escuta da peça. Os complexos espectrais utilizados estão sempre a se formar e se deformar, sempre em devir. Assim, a peça convida orquestra e ouvintes a imergirem nesta ambiência sonora de temperamento e andamento fluidos.
+
+* Notas de performance
+
+- Todos os naipes apresentam divisi a dois
+
+- Apenas os intervalos de 4ª, 5ª e 8ª justas devem ser necessariamente afinados.
+
+- Trêmolos: sempre o mais rápido possível
+
+- Indicações de posição de arco
+  
+  st.: sul tasto
+
+  sp.: sul ponticello
+
+  esp.: extremamente sul ponticello
+
+  ord.: posição ordinária

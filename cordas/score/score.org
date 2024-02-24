@@ -1,0 +1,32 @@
+#+title: Nuvens-ilhas 
+#+author: Davi Raubach
+#+OPTIONS: num:nil toc:nil date:nil
+#+PROPERTY: header-args:lilypond :noweb yes
+#+EXCLUDE_TAGS: noexport
+#+LATEX_HEADER: \usepackage{nopageno}
+#+LaTeX_HEADER: \usepackage{pdfpages}
+
+#+INCLUDE: abntex2.org             :only-contents t
+#+INCLUDE: abntex2-meta.org        :only-contents t
+#+INCLUDE: abntex2-pretextual.org  :only-contents t
+
+
+* Prefácio
+Lorem
+
+* Notas de Performance
+
+*Duração* c. 8 min 
+
+** Bow placement
+| sp.     | sul ponticello                            |
+| spe.    | extreme sul ponticello, cancelled by ord. |
+| ob.     | on the bridge                             |
+| 1/2 ob. | half on the bridge and half on the string |
+| st.     | sul tasto, caancelled by ord.             |
+| ord.    | ordinario                                 |
+
+#+LATEX: \includepdf[pages=-,pagecommand={}]{cordas_score.pdf}
+
+
+

@@ -1,0 +1,7 @@
+[ orchestra Vn Vn+S Vn+SP Vn Vn+S Vn+SP Va Va+S Va+SP Vc Vc+S Vc+SP Cb Cb+S ]
+[ segment 0 30000.2
+	[ solution 1
+		[ note 30000.2 Vn ord E5 pp 4c /Strings/Violin/ordinario/Vn-ord-E5-pp-4c-N.wav 0 ]
+		[ note 30000.2 Vc trem A2 pp 4c /Strings/Violoncello/tremolo/Vc-trem-A2-pp-4c-N.wav 0 ]
+	]
+]

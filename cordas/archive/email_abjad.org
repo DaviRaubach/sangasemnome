@@ -1,0 +1,202 @@
+Hello abjad group,
+
+I would like to get a little help on rewriting meter of contents in short containers.
+
+My system relies on composing containers for different materials. So I have easy access to them later and can treat several containers at once. When writting longer containers I don't have this problem. Now that I want small segments in containers I can not rewrite correctly.
+
+In the following example, in test1, I get a wrong result. In test2, I extract the contents and then get the right result. I would like to have the result of test2 without loosing my containers.
+
+It seems that it is how ~abjad.Meter.rewrite_meter~ works. However, I am wondering if it could someday work with subcontainers or if there is a different approach that I could try.
+
+I am using abjad 3.14.
+Thank you,
+
+Davi
+
+#+begin_src python  :results output
+  import abjad
+
+  # TEST 1: wrong
+  material_a = abjad.Container(r"r2 r16")
+  material_b = abjad.Container(r"c'2 ~ c'16")
+  material_c = abjad.Container(r"c'8.")
+  material_d = abjad.Container(r"c'4")
+  material_e = abjad.Container(r"r2 r8.")
+
+  container_test1 = abjad.Container(
+      [material_a, material_b, material_c,
+       material_d, material_e]
+  )
+  print("written:", abjad.lilypond(container_test1))
+  print("original container:", container_test1)
+  meters = [abjad.TimeSignature((5, 4)), abjad.TimeSignature((4, 4))]
+
+  def rewrite_meter(
+      container,
+      time_signatures,
+      boundary_depth=1,
+      rewrite_tuplets=True,
+      maximum_dot_count=1,
+  ):
+      """Rewrite meter according to ``abjad.TimeSignature`` or ``tuple`` list."""
+      if isinstance(time_signatures[0], abjad.TimeSignature):
+          durations = [_.duration for _ in time_signatures]
+      else:
+          time_signatures = [abjad.TimeSignature(_) for _ in time_signatures]
+          durations = time_signatures
+      if container:
+          shards = abjad.mutate.split(container[:], durations)
+          print("split container:", shards)
+          for shard, time_signature in zip(shards, time_signatures):
+              abjad.Meter.rewrite_meter(
+                  shard,
+                  time_signature,
+                  boundary_depth=boundary_depth,
+                  rewrite_tuplets=rewrite_tuplets,
+                  maximum_dot_count=maximum_dot_count,
+              )
+
+
+  def write_time_signatures(container, time_signatures):
+      r"""Write time signatures."""
+      if isinstance(time_signatures[0], abjad.TimeSignature):
+          in_time_signatures = [_.pair for _ in time_signatures]
+      elif isinstance(time_signatures[0], abjad.Meter):
+          in_time_signatures = [
+              _.implied_time_signature for _ in time_signatures]
+      else:
+          in_time_signatures = time_signatures
+      abjad.mutate.split(container[:], in_time_signatures)
+      result = abjad.select.leaves(container)
+
+      result = abjad.select.partition_by_durations(
+          result,
+          in_time_signatures,
+          cyclic=False,
+          fill=abjad.EXACT,
+          in_seconds=False,
+          overhang=True,
+      )
+      for (i, time_sig), selection in zip(enumerate(in_time_signatures), result):
+          j = i
+          if i != 0:
+              j = i - 1
+              if in_time_signatures[j] == time_sig:
+                  pass
+              else:
+                  abjad.attach(
+                      abjad.TimeSignature(time_sig, ),
+                      abjad.select.leaf(selection, 0),
+                  )
+          else:
+              abjad.attach(
+                  abjad.TimeSignature(time_sig),
+                  abjad.select.leaf(selection, 0),
+              )
+
+
+
+  rewrite_meter(container_test1, meters)
+  write_time_signatures(container_test1, meters)
+  print("rewritten test1:", abjad.lilypond(container_test1))
+
+  # TEST 2: right but extracting 
+  material_a = abjad.Container(r"r2 r16")
+  material_b = abjad.Container(r"c'2 ~ c'16")
+  material_c = abjad.Container(r"c'8.")
+  material_d = abjad.Container(r"c'4")
+  material_e = abjad.Container(r"r2 r8.")
+
+  container_test2 = abjad.Container(
+      [material_a, material_b, material_c,
+       material_d, material_e]
+  )
+  for cont in container_test2:
+      abjad.mutate.extract(cont)
+
+  rewrite_meter(container_test2, meters)
+  write_time_signatures(container_test2, meters)
+  print("rewritten test2:", abjad.lilypond(container_test2))
+
+  staff = abjad.Staff([container_test1, container_test2])
+  abjad.show(staff)
+
+#+end_src
+
+#+RESULTS:
+#+begin_example
+written: {
+    {
+        r2
+        r16
+    }
+    {
+        c'2
+        ~
+        c'16
+    }
+    {
+        c'8.
+    }
+    {
+        c'4
+    }
+    {
+        r2
+        r8.
+    }
+}
+original container: Container("{ r2 r16 } { c'2 c'16 } { c'8. } { c'4 } { r2 r8. }")
+split container: [[Container('r2 r16'), Container("c'2 c'16"), Container("c'8")], [Container("c'16"), Container("c'4"), Container('r2 r8.')]]
+rewritten test1: {
+    {
+        %%% \time 5/4 %%%
+        r4.
+        r8.
+    }
+    {
+        c'4.
+        ~
+        c'8.
+    }
+    {
+        c'8
+        ~
+    }
+    {
+        %%% \time 4/4 %%%
+        c'16
+    }
+    {
+        c'4
+    }
+    {
+        r8.
+        r8
+        r8
+        r8
+        r8
+    }
+}
+split container: [[Rest('r2'), Rest('r16'), Note("c'2"), Note("c'16"), Note("c'8")], [Note("c'16"), Note("c'4"), Rest('r2'), Rest('r8.')]]
+rewritten test2: {
+    %%% \time 5/4 %%%
+    r2
+    r16
+    c'8.
+    ~
+    c'4.
+    c'8
+    ~
+    %%% \time 4/4 %%%
+    c'16
+    c'8.
+    ~
+    c'16
+    r8.
+    r2
+}
+#+end_example
+
+
+[[file:~/Desktop/Captura de Tela 2023-06-05 às 10.34.49.png]]

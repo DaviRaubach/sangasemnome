@@ -1,0 +1,13 @@
+# Fdb version 4
+["pdflatex"] 1705004124 "preface.tex" "preface.pdf" "preface" 1705004125 2
+  "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
+  "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1687390720 7683518 f6ca6e882571ff4ed24e336dc18b1525 ""
+  "/usr/local/texlive/2022/texmf.cnf" 1665145287 577 209b46be99c9075fd74d4c0369380e8c ""
+  "homework.cls" 0 -1 0 ""
+  "preface.aux" 1705004124 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "preface.tex" 1705004124 1338 34723a9f17fb95380c5c83c00fd55284 ""
+  (generated)
+  "preface.aux"
+  "preface.log"
+  "preface.pdf"
+  (rewritten before read)

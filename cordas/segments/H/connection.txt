@@ -1,0 +1,10 @@
+[ orchestra Vn Vn Va Vc Cb ]
+[ segment 0 2472.93
+	[ solution 1
+		[ note 2472.93 Vn ord D7 pp 1c /Strings/Violin/ordinario/Vn-ord-D7-pp-1c-T17d.wav 0 ]
+		[ note 2472.93 Vn ord B4 pp 3c /Strings/Violin/ordinario/Vn-ord-B4-pp-3c-N.wav 0 ]
+		[ note 2472.93 Va ord E5 pp 1c /Strings/Viola/ordinario/Va-ord-E5-pp-1c-T18u.wav 0 ]
+		[ note 2472.93 Vc ord A4 pp 2c /Strings/Violoncello/ordinario/Vc-ord-A4-pp-2c-N.wav 0 ]
+		[ note 2472.93 Cb ord C3 pp 1c /Strings/Contrabass/ordinario/Cb-ord-C3-pp-1c-N.wav 0 ]
+	]
+]

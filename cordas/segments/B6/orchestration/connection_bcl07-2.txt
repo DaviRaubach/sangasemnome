@@ -1,0 +1,8 @@
+[ orchestra Vn|Vn+S|Vn+SP Vn|Vn+S|Vn+SP Va Vc Cb ]
+[ segment 0 18000
+	[ solution 1
+		[ note 18000 Va ord A4 pp 3c /Strings/Viola/ordinario/Va-ord-A4-pp-3c-N.wav 0 ]
+		[ note 18000 Vc ord C2 pp 4c /Strings/Violoncello/ordinario/Vc-ord-C2-pp-4c-N.wav 0 ]
+		[ note 18000 Cb ord D3 pp 4c /Strings/Contrabass/ordinario/Cb-ord-D3-pp-4c-T15u.wav 0 ]
+	]
+]
