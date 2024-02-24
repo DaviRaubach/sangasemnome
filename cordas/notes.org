@@ -1,3 +1,0 @@
-* Ideias de implementação
-- uma função que inspecione o uso de indicações diferentes de ord. Verificar se não faltou uma indicação de retomada da posição ordinária.
-- C_A2 acontece esse provlema
